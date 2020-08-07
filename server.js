@@ -34,8 +34,7 @@ app.get('/profile/:id',(req,res) => { getProfile.UserProfile(req,res,db) })
 
 app.put('/image',(req,res) => { UpdateScore.UpdateScore(req,res,db) })
 
-
-app.listen(3000,()=>
+app.listen(process.env.PORT || 3000,()=>
 {
-    console.log("App is running on port 3000")
+    console.log("App is running on port ${process.env.PORT}")
 })
